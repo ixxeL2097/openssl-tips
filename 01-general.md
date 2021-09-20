@@ -18,6 +18,7 @@ How to get certificate serial number :
 
 ```shell
 openssl x509 -noout -serial -in cert.crt
+openssl x509 -noout -serial -in cert.crt | cut -d'=' -f2 | sed 's/../&:/g;s/:$//'
 ```
 
 ## Generating certificate
