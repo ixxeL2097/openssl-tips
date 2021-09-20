@@ -14,6 +14,12 @@ How to read information about a certificate :
 openssl x509 -in k3s-default.crt -noout -text
 ```
 
+How to get certificate serial number :
+
+```shell
+openssl x509 -noout -serial -in cert.crt
+```
+
 ## Generating certificate
 
 Generate a CA certificate able to sign csr:
